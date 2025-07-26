@@ -1,63 +1,259 @@
 ---
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_TITLE, PERSONAL_INFO } from '../consts';
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage={AboutHeroImage}
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`About - ${SITE_TITLE}`} description="Learn more about Ayoob Al-Delaimy's experience, projects, and background" />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>About Me</h1>
+			
+			<section class="experience">
+				<h2>Professional Experience</h2>
+				
+				<div class="experience-item">
+					<div class="experience-header">
+						<h3>Founding Engineer & CEO</h3>
+						<p class="company">FiNDi</p>
+						<p class="duration">Jan 2025 – Present</p>
+					</div>
+					<ul>
+						<li>Founded a cross-border e-commerce platform for international customers to access U.S. marketplaces, addressing shipping and payment limitations.</li>
+						<li>Designed the platform architecture using React, Node.js, Express, and SQL to ensure seamless UX and API integrations.</li>
+						<li>Established logistics partnerships and oversaw backend infrastructure to support scalable, efficient order fulfillment.</li>
+						<li>Leading product development in collaboration with the technical team, driving iterative improvements to core features.</li>
+					</ul>
+				</div>
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+				<div class="experience-item">
+					<div class="experience-header">
+						<h3>Webmaster</h3>
+						<p class="company">SASTA: Society for the Advancement of Science and Technology in the Arab World</p>
+						<p class="duration">July 2022 – Present</p>
+					</div>
+					<ul>
+						<li>Tasked with rebuilding the organization's website to enhance public engagement and modernize branding.</li>
+						<li>Led design, development, and deployment of the new site, ensuring responsiveness and cross-browser compatibility.</li>
+						<li>Streamlined update processes and provided ongoing technical support, improving reliability and maintenance.</li>
+						<li>Resulted in increased web traffic and improved communication with members and affiliates.</li>
+					</ul>
+				</div>
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+				<div class="experience-item">
+					<div class="experience-header">
+						<h3>Software Engineer Intern</h3>
+						<p class="company">San Diego Supercomputer Center</p>
+						<p class="duration">Nov 2023 – Jan 2025</p>
+					</div>
+					<ul>
+						<li>Joined the Research Data Services division to support a portal for research team collaboration and data access.</li>
+						<li>Built full-stack components using React, TypeScript, HTML/CSS, aligning with accessibility and UX best practices.</li>
+						<li>Troubleshot integration issues and implemented robust front-end/back-end features under tight delivery cycles.</li>
+						<li>Delivered production-ready modules that streamlined internal research workflows.</li>
+					</ul>
+				</div>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+				<div class="experience-item">
+					<div class="experience-header">
+						<h3>Embedded Systems Intern</h3>
+						<p class="company">UC San Diego</p>
+						<p class="duration">Jan 2021 – Jan 2022</p>
+					</div>
+					<ul>
+						<li>Built a robotic arm to automate fragile Perovskite solar film placement for nanoengineering research.</li>
+						<li>Designed both hardware and software, implementing precision algorithms to account for film fragility.</li>
+						<li>Created a non-sensor-based tracking solution using kinematic math to improve consistency and accuracy.</li>
+						<li>Resulted in a functioning prototype used in academic research, improving lab efficiency and cited in a paper.</li>
+					</ul>
+				</div>
+			</section>
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
-</Layout>
+			<section class="projects">
+				<h2>Featured Projects</h2>
+				
+				<div class="project-item">
+					<h3>MNIST Digit Classification System</h3>
+					<p class="project-description">Deep Learning System for Handwritten Digit Recognition</p>
+					<ul>
+						<li>Developed a deep learning system achieving 98% accuracy on the MNIST dataset by optimizing the training pipeline, reducing training time by 40%.</li>
+						<li>Implemented a robust testing and validation framework with automated pipelines and visualization tools, ensuring deployment-ready performance.</li>
+						<li>Engineered an efficient custom data loading and preprocessing system, reducing computational overhead by 40% while maintaining high accuracy.</li>
+						<li>Optimized model architecture by fine-tuning hyperparameters and leveraging convolutional neural networks (CNNs), improving both training efficiency and generalization.</li>
+					</ul>
+				</div>
+
+				<div class="project-item">
+					<h3>DALL·E Image Generation & Sharing Platform</h3>
+					<ul>
+						<li>Built a full-stack web app using the MERN stack (MongoDB, Express, React, Node.js).</li>
+						<li>Integrated OpenAI APIs to generate images from text and allow users to browse and share creations.</li>
+					</ul>
+				</div>
+
+				<div class="project-item">
+					<h3>Smart Wardrobe Management System</h3>
+					<p class="project-description">Full-Stack IoT Project</p>
+					<ul>
+						<li>Led development of a smart wardrobe system that provides intelligent clothing suggestions using real-time environmental monitoring.</li>
+						<li>Built a full-stack IoT solution integrating ESP32, MQTT, FastAPI, MySQL, and Docker, along with external weather APIs.</li>
+						<li>Implemented edge computing on ESP32 to preprocess data locally, optimizing cloud processing loads.</li>
+						<li>Resulted in a responsive system capable of serving multiple users with real-time updates.</li>
+					</ul>
+				</div>
+
+				<div class="project-item">
+					<h3>MoodScript — Emotion-Based Movie Quote Generator</h3>
+					<ul>
+						<li>Designed a web application that generates movie quotes based on user-selected emotions.</li>
+						<li>Built using HTML/CSS and JavaScript; expanded backend using Node.js and MongoDB.</li>
+						<li>Integrated an emotion analysis API for matching emotional states to curated quotes.</li>
+					</ul>
+				</div>
+
+				<div class="project-item">
+					<h3>Custom Shell — Unix-Like Shell in C</h3>
+					<ul>
+						<li>Developed a custom Unix-like shell to deepen understanding of system-level programming and process management in C.</li>
+						<li>Faced with the challenge of replicating key shell behavior, including batch execution, piping, redirection, and background jobs.</li>
+						<li>Implemented core functionality like command parsing, job control, history navigation, and signal handling using low-level Unix system calls.</li>
+						<li>Delivered a fully functional shell supporting interactive and batch modes, improving performance through direct memory and process control.</li>
+					</ul>
+				</div>
+
+				<div class="project-item">
+					<h3>Memory Allocator — C-based Heap Manager</h3>
+					<ul>
+						<li>Designed a custom memory allocator to simulate low-level memory management strategies and detect inefficient usage.</li>
+						<li>Tasked with creating a heap manager that supports best-fit and first-fit allocation while minimizing fragmentation.</li>
+						<li>Built detailed introspection tools that allowed visibility into allocation behavior, helping users identify memory leaks and dead space.</li>
+						<li>Improved memory efficiency and debugging capability, demonstrating mastery of pointer arithmetic and heap organization in C.</li>
+					</ul>
+				</div>
+
+				<div class="project-item">
+					<h3>Chat Server — Real-Time Multi-User Chat System in C</h3>
+					<ul>
+						<li>Built a multi-user chat server to explore real-time communication systems and socket programming.</li>
+						<li>Needed to support concurrent users with reliable message delivery, authentication, and session handling.</li>
+						<li>Implemented multi-threaded architecture in C, enabling simultaneous client connections, message broadcasting, and private messaging.</li>
+						<li>Added an optional HTTP interface for web-based clients, expanding accessibility beyond terminal-based users.</li>
+					</ul>
+				</div>
+
+				<div class="project-item">
+					<h3>SHA256 Variation Matcher — Cryptographic Pattern Finder</h3>
+					<ul>
+						<li>Developed a tool to analyze how small input changes affect SHA256 outputs — useful for studying hash behavior and collisions.</li>
+						<li>Given a target hash pattern, tasked with identifying single-character mutations that produce similar hash prefixes.</li>
+						<li>Engineered a high-speed brute-force matcher with parallel computing to search hash space efficiently.</li>
+						<li>Optimized search runtime significantly, allowing pattern analysis across larger input ranges in shorter time.</li>
+					</ul>
+				</div>
+
+				<div class="project-item">
+					<h3>UTF-8 Navigator — Unicode Codepoint Explorer in C</h3>
+					<ul>
+						<li>Created a terminal-based UTF-8 navigator to explore encoding behavior of Unicode characters at the byte level.</li>
+						<li>Tasked with supporting multiple character sets, including edge cases involving multi-byte sequences and surrogate pairs.</li>
+						<li>Implemented encoding, decoding, and validation features in C, handling malformed input and supporting user input inspection.</li>
+						<li>Enabled developers to trace byte sequences to their Unicode meanings, aiding in debugging and internationalization efforts.</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="contact">
+				<h2>Get In Touch</h2>
+				<p>
+					I'm always open to discussing new opportunities, collaborations, or just connecting with fellow developers and engineers. 
+					Feel free to reach out through any of the channels below:
+				</p>
+				<div class="contact-info">
+					<p>📧 <a href="mailto:awaldelaimy@gmail.com">awaldelaimy@gmail.com</a></p>
+					<p>📱 <a href="tel:+18589880340">(858) 988-0340</a></p>
+					<p>🌐 <a href="https://ayoobaldelaimy.com">ayoobaldelaimy.com</a></p>
+					<p>📍 San Diego, CA</p>
+				</div>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.experience-item, .project-item {
+		margin: 2em 0;
+		padding: 1.5em;
+		background: rgba(var(--gray-light), 0.2);
+		border-radius: 8px;
+		border-left: 4px solid var(--accent);
+	}
+
+	.experience-header {
+		margin-bottom: 1em;
+	}
+
+	.experience-header h3 {
+		color: var(--accent);
+		margin-bottom: 0.5em;
+	}
+
+	.company {
+		font-weight: 600;
+		margin: 0.3em 0;
+	}
+
+	.duration {
+		color: rgb(var(--gray));
+		font-style: italic;
+		margin: 0.3em 0;
+	}
+
+	.project-description {
+		color: var(--accent);
+		font-style: italic;
+		margin: 0.5em 0;
+	}
+
+	ul {
+		margin: 1em 0;
+		padding-left: 1.5em;
+	}
+
+	li {
+		margin: 0.5em 0;
+		line-height: 1.6;
+	}
+
+	.contact {
+		margin-top: 3em;
+		padding: 2em;
+		background: rgba(var(--gray-light), 0.3);
+		border-radius: 8px;
+		text-align: center;
+	}
+
+	.contact-info {
+		margin-top: 1.5em;
+	}
+
+	.contact-info p {
+		margin: 0.8em 0;
+		font-size: 1.1em;
+	}
+
+	.contact-info a {
+		color: var(--accent);
+		text-decoration: none;
+	}
+
+	.contact-info a:hover {
+		text-decoration: underline;
+	}
+</style>
